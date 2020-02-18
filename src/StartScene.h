@@ -10,6 +10,11 @@
 #include "Three.h"
 #include "Five.h"
 #include "Seven.h"
+#include "QuitButton.h"
+#include "BetButton.h"
+#include "AddButton.h"
+#include "DeleteButton.h"
+#include "RestartButton.h"
 
 class StartScene : public Scene
 {
@@ -33,6 +38,11 @@ private:
 	// Game Objects
 	SlotMachine* m_pSlotMachine;
 	SpinButton* m_pSpinButton;
+	QuitButton* m_pQuitButton;
+	BetButton* m_pBetButton;
+	AddButton* m_pAddButton;
+	DeleteButton* m_pDeleteButton;
+	RestartButton* m_pRestartButton;
 	One* m_pOne;
 	Three* m_pThree;
 	Five* m_pFive;

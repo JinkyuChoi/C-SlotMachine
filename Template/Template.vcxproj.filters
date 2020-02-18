@@ -34,6 +34,9 @@
     <Filter Include="Game Objects\Slots">
       <UniqueIdentifier>{f1657eb8-e211-49f3-95d1-65211f1e1600}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game Objects\Buttons">
+      <UniqueIdentifier>{ffa48765-5679-4d48-837e-3b091c4bc165}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\main.cpp">
@@ -87,12 +90,6 @@
     <ClCompile Include="..\src\CollisionManager.cpp">
       <Filter>Managers</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Button.cpp">
-      <Filter>Game Objects</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\SpinButton.cpp">
-      <Filter>Game Objects</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\Slotmachine.cpp">
       <Filter>Game Objects</Filter>
     </ClCompile>
@@ -107,6 +104,27 @@
     </ClCompile>
     <ClCompile Include="..\src\Seven.cpp">
       <Filter>Game Objects\Slots</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Button.cpp">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SpinButton.cpp">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\QuitButton.cpp">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\BetButton.cpp">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\AddButton.cpp">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DeleteButton.cpp">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\RestartButton.cpp">
+      <Filter>Game Objects\Buttons</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -179,14 +197,8 @@
     <ClInclude Include="..\src\SceneState.h">
       <Filter>Enums</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Button.h">
-      <Filter>Game Objects</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\Move.h">
       <Filter>Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\SpinButton.h">
-      <Filter>Game Objects</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Slotmachine.h">
       <Filter>Game Objects</Filter>
@@ -202,6 +214,27 @@
     </ClInclude>
     <ClInclude Include="..\src\Seven.h">
       <Filter>Game Objects\Slots</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Button.h">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SpinButton.h">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\QuitButton.h">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\BetButton.h">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\AddButton.h">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DeleteButton.h">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\RestartButton.h">
+      <Filter>Game Objects\Buttons</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
