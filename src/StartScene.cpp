@@ -15,20 +15,28 @@ StartScene::~StartScene()
 
 void StartScene::draw()
 {
-	//m_pStartLabel->draw();
 	m_pSlotMachine->draw();
+	
 	m_pOne->setPosition(glm::vec2(Config::SCREEN_WIDTH * 0.10, Config::SCREEN_HEIGHT * 0.12));
 	m_pOne->draw();
 	m_pFive->setPosition(glm::vec2(Config::SCREEN_WIDTH * 0.43, Config::SCREEN_HEIGHT * 0.12));
 	m_pFive->draw();
 	m_pSeven->setPosition(glm::vec2(Config::SCREEN_WIDTH * 0.75, Config::SCREEN_HEIGHT * 0.12));
 	m_pSeven->draw();
+	
 	m_pSpinButton->draw();
 	m_pQuitButton->draw();
 	m_pBetButton->draw();
 	m_pAddButton->draw();
 	m_pDeleteButton->draw();
 	m_pRestartButton->draw();
+
+	m_pCurrentBetLabel->draw();
+	m_pCurrentMoneyLabel->draw();
+	m_pResultLabelLabel->draw();
+	m_pJackpotMoneyLabel->draw();
+	m_pJackpotResultLabel->draw();
+
 	
 }
 
@@ -73,7 +81,6 @@ void StartScene::handleEvents()
 			m_mousePosition.x = event.motion.x;
 			m_mousePosition.y = event.motion.y;
 			break;
-
 		case SDL_MOUSEBUTTONDOWN:
 			switch (event.button.button)
 			{
@@ -86,7 +93,6 @@ void StartScene::handleEvents()
 				m_pRestartButton->setMouseButtonClicked(true);
 				break;
 			}
-
 			break;
 		case SDL_MOUSEBUTTONUP:
 			switch (event.button.button)
@@ -113,14 +119,11 @@ void StartScene::handleEvents()
 // this function is used for initialization
 void StartScene::start()
 {
-
 	m_pSpinButton = new SpinButton();
 	addChild(m_pSpinButton);
 
-
 	m_pQuitButton = new QuitButton();
 	addChild(m_pQuitButton);
-
 
 	m_pBetButton = new BetButton();
 	addChild(m_pBetButton);
@@ -135,11 +138,23 @@ void StartScene::start()
 	addChild(m_pRestartButton);
 	
 	m_pSlotMachine = new SlotMachine();
+
 	m_pOne = new One();
 	m_pThree = new Three();
 	m_pFive = new Five();
 	m_pSeven = new Seven();
 
+	SDL_Color black = { 0,0,0,255 };
+	m_pCurrentBetLabel = new Label("Player bet : " + std::to_string(playerBet), "OpenSans-Regular", 17,
+		black, glm::vec2(250, 335), true, false);
+	m_pCurrentMoneyLabel = new Label("Player Money : " + std::to_string(playerMoney), "OpenSans-Regular", 17,
+		black, glm::vec2(30,335), true, false);;
+	m_pResultLabelLabel = new Label("Result : " + result, "OpenSans-Regular", 15,
+		black, glm::vec2(30,300), true, false);;
+	m_pJackpotMoneyLabel = new Label("Jackpot Money : " + std::to_string(jackpot), "OpenSans-Regular", 15,
+		black, glm::vec2(250,0), true, false);;
+	m_pJackpotResultLabel = new Label("Jackpot Result : " + jackpotResult, "OpenSans-Regular", 17,
+		black, glm::vec2(300,300), true, false);;
 }
 
 glm::vec2 StartScene::getMousePosition()

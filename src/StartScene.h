@@ -36,6 +36,8 @@ public:
 
 private:
 	// Game Objects
+
+	//Buttons
 	SlotMachine* m_pSlotMachine;
 	SpinButton* m_pSpinButton;
 	QuitButton* m_pQuitButton;
@@ -43,10 +45,33 @@ private:
 	AddButton* m_pAddButton;
 	DeleteButton* m_pDeleteButton;
 	RestartButton* m_pRestartButton;
+
+	//Labels
+	Label* m_pCurrentBetLabel;
+	Label* m_pCurrentMoneyLabel;
+	Label* m_pResultLabelLabel;
+	Label* m_pJackpotMoneyLabel;
+	Label* m_pJackpotResultLabel;
+
+
 	One* m_pOne;
 	Three* m_pThree;
 	Five* m_pFive;
 	Seven* m_pSeven;
+
+	//properties
+	int playerMoney = 1000;
+	int jackpot = 5000;
+	int playerBet = 0;
+	std::string spinResult[3] = { "","","" };
+	std::string slots = "";
+	float winRatio = 0.0f;
+	int one = 0;
+	int three = 0;
+	int five = 0;
+	int seven = 0;
+	std::string result = "Not played yet";
+	std::string jackpotResult = "Not played yet";
 	
 	// private data member
 	glm::vec2 m_mousePosition;
