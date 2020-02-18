@@ -3,6 +3,8 @@
 #define __GAME_OBJECT_TYPE__
 enum GameObjectType {
 	NONE = -1,
+	SLOT_MACHINE,
+	SLOTS,
 	START_BUTTON,
 	NUM_OF_TYPES
 };

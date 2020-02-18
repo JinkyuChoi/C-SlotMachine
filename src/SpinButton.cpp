@@ -1,21 +1,21 @@
-#include "StartButton.h"
+#include "SpinButton.h"
 #include "Game.h"
 
-StartButton::StartButton()
+SpinButton::SpinButton()
 	// call super constructor
 	:Button(
-		"../Assets/textures/StartButton.png",
+		"../Assets/textures/SpinButton.png",
 		"startButton",
 		START_BUTTON, glm::vec2(320.0f, 430.0f)), m_isClicked(false)
 {
 	
 }
 
-StartButton::~StartButton()
+SpinButton::~SpinButton()
 {
 }
 
-bool StartButton::ButtonClick()
+bool SpinButton::ButtonClick()
 {
 	if (m_mouseOver() && m_mouseButtonClicked)
 	{

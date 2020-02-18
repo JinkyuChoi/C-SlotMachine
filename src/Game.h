@@ -23,8 +23,6 @@
 
 // Scenes
 #include "StartScene.h"
-#include "Level1Scene.h"
-#include "EndScene.h"
 
 class Game
 {

@@ -31,6 +31,9 @@
     <Filter Include="Enums">
       <UniqueIdentifier>{c00e61a2-9515-4297-a699-76a9a5f3005e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game Objects\Slots">
+      <UniqueIdentifier>{f1657eb8-e211-49f3-95d1-65211f1e1600}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\main.cpp">
@@ -84,11 +87,26 @@
     <ClCompile Include="..\src\CollisionManager.cpp">
       <Filter>Managers</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\StartButton.cpp">
-      <Filter>Game Objects</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\Button.cpp">
       <Filter>Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SpinButton.cpp">
+      <Filter>Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Slotmachine.cpp">
+      <Filter>Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\One.cpp">
+      <Filter>Game Objects\Slots</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Three.cpp">
+      <Filter>Game Objects\Slots</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Five.cpp">
+      <Filter>Game Objects\Slots</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Seven.cpp">
+      <Filter>Game Objects\Slots</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -161,14 +179,29 @@
     <ClInclude Include="..\src\SceneState.h">
       <Filter>Enums</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\StartButton.h">
-      <Filter>Game Objects</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\Button.h">
       <Filter>Game Objects</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Move.h">
       <Filter>Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SpinButton.h">
+      <Filter>Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Slotmachine.h">
+      <Filter>Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\One.h">
+      <Filter>Game Objects\Slots</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Three.h">
+      <Filter>Game Objects\Slots</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Five.h">
+      <Filter>Game Objects\Slots</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Seven.h">
+      <Filter>Game Objects\Slots</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

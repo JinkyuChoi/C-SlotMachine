@@ -1,7 +1,6 @@
 #include "StartScene.h"
 #include "Game.h"
 #include <ctime>
-#include "GLM/gtx/string_cast.hpp"
 #include <algorithm>
 #include <iomanip>
 
@@ -16,23 +15,26 @@ StartScene::~StartScene()
 
 void StartScene::draw()
 {
-	m_pStartLabel->draw();
-	m_pStartButton->draw();
-	m_pSlot->draw();
+	//m_pStartLabel->draw();
+	m_pSlotMachine->draw();
+	m_pOne->setPosition(glm::vec2(Config::SCREEN_WIDTH * 0.10, Config::SCREEN_HEIGHT * 0.12));
+	m_pOne->draw();
+	m_pFive->setPosition(glm::vec2(Config::SCREEN_WIDTH * 0.43, Config::SCREEN_HEIGHT * 0.12));
+	m_pFive->draw();
+	m_pSeven->setPosition(glm::vec2(Config::SCREEN_WIDTH * 0.75, Config::SCREEN_HEIGHT * 0.12));
+	m_pSeven->draw();
+	m_pSpinButton->draw();
 	
 }
 
 void StartScene::update()
 {
-	m_pStartButton->setMousePosition(m_mousePosition);
-	m_pStartButton->ButtonClick();
-	m_pSlot->update();
+	m_pSpinButton->setMousePosition(m_mousePosition);
+	m_pSpinButton->ButtonClick();
 }
 
 void StartScene::clean()
 {
-	delete m_pStartLabel;
-	
 	removeAllChildren();
 }
 
@@ -56,7 +58,7 @@ void StartScene::handleEvents()
 			switch (event.button.button)
 			{
 			case SDL_BUTTON_LEFT:
-				m_pStartButton->setMouseButtonClicked(true);
+				m_pSpinButton->setMouseButtonClicked(true);
 				break;
 			}
 
@@ -65,7 +67,7 @@ void StartScene::handleEvents()
 			switch (event.button.button)
 			{
 			case SDL_BUTTON_LEFT:
-				m_pStartButton->setMouseButtonClicked(false);
+				m_pSpinButton->setMouseButtonClicked(false);
 				break;
 			}
 			break;
@@ -84,12 +86,6 @@ void StartScene::handleEvents()
 			case SDLK_ESCAPE:
 				TheGame::Instance()->quit();
 				break;
-			case SDLK_1:
-				TheGame::Instance()->changeSceneState(SceneState::LEVEL1_SCENE);
-				break;
-			case SDLK_2:
-				TheGame::Instance()->changeSceneState(SceneState::END_SCENE);
-				break;
 			}
 			break;
 
@@ -102,83 +98,19 @@ void StartScene::handleEvents()
 // this function is used for initialization
 void StartScene::start()
 {
-	SDL_Color blue = { 0, 0, 255, 255 };
-	m_pStartLabel = new Label("Mail Pilot", "Dock51", 80, blue, 
-		glm::vec2(Config::SCREEN_WIDTH * 0.5f, 100.0f));
-	m_pStartLabel->setParent(this);
-	addChild(m_pStartLabel);
 
-	m_pStartButton = new StartButton();
-	//m_pStartButton->setPosition(glm::vec2(Config::SCREEN_WIDTH * 0.5f, Config::SCREEN_HEIGHT * 0.5f));
-	addChild(m_pStartButton);
+	m_pSpinButton = new SpinButton();
+	addChild(m_pSpinButton);
 
-	m_pSlot = new Slot();
+	m_pSlotMachine = new SlotMachine();
+	m_pOne = new One();
+	m_pThree = new Three();
+	m_pFive = new Five();
+	m_pSeven = new Seven();
+
 }
 
 glm::vec2 StartScene::getMousePosition()
 {
 	return m_mousePosition;
-}
-
-std::string StartScene::reels()
-{
-	std::string betLine[3] = { " ", " ", " " };
-	int outCome[3] = {0, 0, 0};
-
-        for (int spin = 0; spin < 3; spin++) {
-            outCome[spin] = (rand() * 65) + 1;
-			if (checkRange(outCome[spin], 1, 27))
-			{// 41.5% probability
-				betLine[spin] = "blank";
-				blanks++;
-			}
-			else if (checkRange(outCome[spin], 28, 37))
-			{ // 15.4% probability
-				betLine[spin] = "Grapes";
-				grapes++;
-			}
-			else if (checkRange(outCome[spin], 38, 46))
-			{// 13.8% probability
-				betLine[spin] = "Banana";
-				bananas++;
-			}
-			else if (checkRange(outCome[spin], 47, 54))
-			{// 12.3% probability
-				betLine[spin] = "Orange";
-				oranges++;
-			} 
-			else if (checkRange(outCome[spin], 55, 59))
-			{//  7.7% probability
-				betLine[spin] = "Cherry";
-				cherries++;
-			}
-			else if (checkRange(outCome[spin], 60, 62))
-			{//  4.6% probability
-				betLine[spin] = "Bar";
-				bars++;
-			}
-			else if (checkRange(outCome[spin], 63, 64))
-			{//  3.1% probability
-				betLine[spin] = "Bell";
-				bells++;
-			}
-			else if (checkRange(outCome[spin], 65, 65))
-			{//  1.5% probability
-				betLine[spin] = "Seven";
-				sevens++;
-			}
-        }
-        return betLine;
-    }
-}
-
-int StartScene::checkRange(int value, int lowerBounds, int upperBounds) {
-	if (value >= lowerBounds && value <= upperBounds)
-	{
-		return value;
-	}
-	else
-	{
-		return !value;
-	}
 }
