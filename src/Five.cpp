@@ -1,3 +1,9 @@
+//301024988 Jinkyu Choi
+//2020-02-18
+//Visual Slot for Five
+//Referenced from Tom Tsiliopoulos
+
+
 #include "Five.h"
 #include "TextureManager.h"
 #include "Game.h"

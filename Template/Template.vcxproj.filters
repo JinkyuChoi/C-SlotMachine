@@ -72,9 +72,6 @@
     <ClCompile Include="..\src\Label.cpp">
       <Filter>Game Objects</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\StartScene.cpp">
-      <Filter>Scenes</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\DisplayObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -114,16 +111,16 @@
     <ClCompile Include="..\src\QuitButton.cpp">
       <Filter>Game Objects\Buttons</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\BetButton.cpp">
-      <Filter>Game Objects\Buttons</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\AddButton.cpp">
-      <Filter>Game Objects\Buttons</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\DeleteButton.cpp">
-      <Filter>Game Objects\Buttons</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\RestartButton.cpp">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MainScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IncreaseBetButton.cpp">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DecreaseBetButton.cpp">
       <Filter>Game Objects\Buttons</Filter>
     </ClCompile>
   </ItemGroup>
@@ -166,9 +163,6 @@
     </ClInclude>
     <ClInclude Include="..\src\Label.h">
       <Filter>Game Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\StartScene.h">
-      <Filter>Scenes</Filter>
     </ClInclude>
     <ClInclude Include="..\src\DisplayObject.h">
       <Filter>Header Files</Filter>
@@ -224,16 +218,16 @@
     <ClInclude Include="..\src\QuitButton.h">
       <Filter>Game Objects\Buttons</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\BetButton.h">
-      <Filter>Game Objects\Buttons</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\AddButton.h">
-      <Filter>Game Objects\Buttons</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\DeleteButton.h">
-      <Filter>Game Objects\Buttons</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\RestartButton.h">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MainScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\IncreaseBetButton.h">
+      <Filter>Game Objects\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DecreaseBetButton.h">
       <Filter>Game Objects\Buttons</Filter>
     </ClInclude>
   </ItemGroup>

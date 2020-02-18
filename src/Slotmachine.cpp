@@ -1,3 +1,9 @@
+//301024988 Jinkyu Choi
+//2020-02-18
+//Visual Frame for the Slots
+//Referenced from Tom Tsiliopoulos
+
+
 #include "SlotMachine.h"
 #include "TextureManager.h"
 #include "Game.h"

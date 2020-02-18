@@ -1,3 +1,9 @@
+//301024988 Jinkyu Choi
+//2020-02-18
+//Button to spin the slots
+//Referenced from Tom Tsiliopoulos
+
+
 #include "SpinButton.h"
 #include "Game.h"
 

@@ -161,11 +161,10 @@
     <ClCompile Include="..\include\IMGUI\imgui_draw.cpp" />
     <ClCompile Include="..\include\IMGUI\imgui_widgets.cpp" />
     <ClCompile Include="..\include\IMGUI_SDL\imgui_sdl.cpp" />
-    <ClCompile Include="..\src\AddButton.cpp" />
-    <ClCompile Include="..\src\BetButton.cpp" />
+    <ClCompile Include="..\src\IncreaseBetButton.cpp" />
     <ClCompile Include="..\src\Button.cpp" />
     <ClCompile Include="..\src\CollisionManager.cpp" />
-    <ClCompile Include="..\src\DeleteButton.cpp" />
+    <ClCompile Include="..\src\DecreaseBetButton.cpp" />
     <ClCompile Include="..\src\DisplayObject.cpp" />
     <ClCompile Include="..\src\Five.cpp" />
     <ClCompile Include="..\src\FontManager.cpp" />
@@ -181,7 +180,7 @@
     <ClCompile Include="..\src\SoundManager.cpp" />
     <ClCompile Include="..\src\Slotmachine.cpp" />
     <ClCompile Include="..\src\SpinButton.cpp" />
-    <ClCompile Include="..\src\StartScene.cpp" />
+    <ClCompile Include="..\src\MainScene.cpp" />
     <ClCompile Include="..\src\TextureManager.cpp" />
     <ClCompile Include="..\src\Three.cpp" />
     <ClCompile Include="..\src\Util.cpp" />
@@ -194,12 +193,11 @@
     <ClInclude Include="..\include\IMGUI\imstb_textedit.h" />
     <ClInclude Include="..\include\IMGUI\imstb_truetype.h" />
     <ClInclude Include="..\include\IMGUI_SDL\imgui_sdl.h" />
-    <ClInclude Include="..\src\AddButton.h" />
-    <ClInclude Include="..\src\BetButton.h" />
+    <ClInclude Include="..\src\IncreaseBetButton.h" />
     <ClInclude Include="..\src\Button.h" />
     <ClInclude Include="..\src\CollisionManager.h" />
     <ClInclude Include="..\src\Config.h" />
-    <ClInclude Include="..\src\DeleteButton.h" />
+    <ClInclude Include="..\src\DecreaseBetButton.h" />
     <ClInclude Include="..\src\DisplayObject.h" />
     <ClInclude Include="..\src\Five.h" />
     <ClInclude Include="..\src\FontManager.h" />
@@ -218,7 +216,7 @@
     <ClInclude Include="..\src\Slotmachine.h" />
     <ClInclude Include="..\src\SoundManager.h" />
     <ClInclude Include="..\src\SpinButton.h" />
-    <ClInclude Include="..\src\StartScene.h" />
+    <ClInclude Include="..\src\MainScene.h" />
     <ClInclude Include="..\src\SteeringState.h" />
     <ClInclude Include="..\src\TextureManager.h" />
     <ClInclude Include="..\src\Three.h" />

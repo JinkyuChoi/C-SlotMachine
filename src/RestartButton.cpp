@@ -1,3 +1,9 @@
+//301024988 Jinkyu Choi
+//2020-02-18
+//Button to restart the game
+//Referenced from Tom Tsiliopoulos
+
+
 #include "RestartButton.h"
 
 RestartButton::RestartButton() : Button(

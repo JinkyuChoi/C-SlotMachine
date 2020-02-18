@@ -139,7 +139,7 @@ void Game::changeSceneState(SceneState newState)
 		switch (m_currentSceneState)
 		{
 		case SceneState::START_SCENE:
-			m_currentScene = new StartScene();
+			m_currentScene = new MainScene();
 			std::cout << "start scene activated" << std::endl;
 			break;
 		default:

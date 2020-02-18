@@ -22,7 +22,7 @@
 #include "Util.h"
 
 // Scenes
-#include "StartScene.h"
+#include "MainScene.h"
 
 class Game
 {
